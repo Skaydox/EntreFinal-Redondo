@@ -79,11 +79,17 @@ header {
     color: #464646;
     font-weight: bold; }
   .p404 .p404_Title2 {
-    color: #bcbcbc; }
+    color: #bcbcbc;
+    text-align: center; }
   .p404 .p404_Text {
     font-weight: bold;
     font-size: 2rem;
-    margin: 50px 0 50px 0; }
+    margin: 50px 0 50px 0;
+    text-align: center; }
+
+@media only screen and (max-width: 984px) {
+  .p404 {
+    margin: 100px 0 100px 0; } }
 
 * {
   padding: 0;
