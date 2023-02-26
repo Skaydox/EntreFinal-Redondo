@@ -1,6 +1,11 @@
-/*Colores*/
-$color-primario: rgb(255, 255, 255);
-$color-secundario: rgb(218, 218, 218);
+@import "_colores";
+@import "_header";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 /*Los cuadros de las caracterizticas principales del página*/
 @mixin cuadro {
@@ -53,85 +58,6 @@ $color-secundario: rgb(218, 218, 218);
     &:hover{
         transform: scale(1.02,1.02);
     }
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/*Configuraciones básicas del Headder*/
-#logo {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: start;
-    align-items: center;
-}
-#logo img {
-    margin: 0 16px 0 0;
-    width: 64px;
-    height: 64px;
-}
-#logo h2 {
-    color:#161925;
-}
-
-.h3-text{
-    text-align: center;
-}
-.text-special{
-    text-align: center;
-    color: #161925;
-}
-
-header {
-    position:fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    background:linear-gradient(to top, #7198c2, #8EA8C3);
-    padding: 16px;
-    margin: 0;
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 5px 15px 5px rgba(135, 135, 135, 0.3);
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    nav ul {
-        padding-top: 12px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-        list-style-type: none;
-
-        li a {
-            padding: 5px 10px;
-            margin: 0px 5px;
-            text-decoration: none;
-            color: $color-primario;
-            border-radius: 16px;
-            font-weight: 600;
-            font-size: 1.3rem;
-        
-            transition: all .2s ease;
-            &:hover {
-                color: black;
-                background-color: $color-primario;
-                border-radius: 16px;
-            }
-        }
-    }
-}
-
-#header-fix {
-    padding-top: 110px;
 }
 
 .texto-destacado{
@@ -275,7 +201,7 @@ header {
     font-size: 5rem;
     font-weight: 800;
     color: rgb(86, 196, 110);
-    background-color: rgba(0, 0, 0, 0.371);
+    background-color: rgba(0, 0, 0, 0.071);
     animation-name: descuento;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -424,6 +350,7 @@ footer {
     #header-fix {
         padding-top: 230px;
     }
+
 }
 
 @media only screen and (max-width: 423px){
