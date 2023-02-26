@@ -1,5 +1,6 @@
 @import "_colores";
 @import "_header";
+@import "_404";
 
 * {
     padding: 0;
@@ -16,8 +17,8 @@
     max-width: 700px;
     text-align: center;
     height: 150px;
-    background-color: rgba(135, 135, 135, 0.5);
-    box-shadow: 0px 0px 15px 5px rgba(135, 135, 135, 0.5);
+    background-color: rgba(111, 111, 111, 0.4);
+    box-shadow: 0px 0px 15px 10px rgba(135, 135, 135, 0.5);
     transition: all 0.3s ease;
 
     display: flex;
@@ -30,13 +31,13 @@
 @mixin flex_d {
     display: flex;
     flex-flow: row wrap;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 @mixin flex_i {
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
@@ -47,17 +48,19 @@
     @include flex_d;
 }
 
-.padding_banner-text {
-    padding: 128px;
-    font-size: 2rem;
-    font-weight: bold;  
-}
-
 .imagenBanner {
+    max-width: 100%; 
+    height: auto; 
     transition: .3s all ease;
     &:hover{
         transform: scale(1.02,1.02);
     }
+}
+.padding_banner-text {
+    padding: 34px;
+    font-size: 2rem;
+    font-weight: bold;  
+    text-decoration: underline;
 }
 
 .texto-destacado{
@@ -101,8 +104,8 @@
     font-style: italic;  
 }
 .descuentoBanner{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     transition: all 0.5s ease;
     border-radius: 20%;
 }
@@ -201,7 +204,7 @@
     font-size: 5rem;
     font-weight: 800;
     color: rgb(86, 196, 110);
-    background-color: rgba(0, 0, 0, 0.071);
+    background-color: rgba(0, 0, 0, 0.271);
     animation-name: descuento;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -299,6 +302,9 @@
 .contacto-fix{
     margin-left:46px
 }
+.contacto-text{
+    text-align: center;
+}
 
 footer {
     width: 100%;
@@ -308,6 +314,9 @@ footer {
     color:white;
     text-align: center;
     align-self: center;
+}
+.footer-link{
+    color:white;
 }
 
 /*Media-querris para la adaptación en diferentes pantallas*/
@@ -341,8 +350,11 @@ footer {
         align-content: center;
     }
     .descuentoBanner{
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
+    }
+    .seccionCompra__h2--descuento {
+        font-size: 3rem;
     }
 }
 
@@ -350,7 +362,6 @@ footer {
     #header-fix {
         padding-top: 230px;
     }
-
 }
 
 @media only screen and (max-width: 423px){

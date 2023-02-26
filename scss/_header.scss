@@ -25,11 +25,11 @@
 header {
     position:fixed;
     z-index: 10;
+    padding: 16px;
     top: 0;
     left: 0;
     right: 0;
     background:linear-gradient(to top, #7198c2, #8EA8C3);
-    padding: 16px;
     margin: 0;
     width: 100%;
     height: auto;
@@ -40,8 +40,11 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    nav ul, ol {
+    nav ul {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
         padding-top: 12px;
+        padding-bottom: 0px;
         padding-left: 0rem;
         display: flex;
         flex-flow: row wrap;
@@ -71,5 +74,3 @@ header {
 #header-fix {
     padding-top: 110px;
 }
-
-// Lists

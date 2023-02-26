@@ -1,0 +1,30 @@
+.p404_bg{
+    background-image: url("../assets/img/404.png");
+    background-size: cover;
+}
+
+.p404{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+
+    margin: 250px 0 250px 0;
+
+    .p404_Title{
+        font-size: 10rem;
+        color: #464646;
+        font-weight: bold;
+    }
+    .p404_Title2{
+        color: #bcbcbc;
+    }
+    .p404_Text{
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 50px 0 50px 0;
+    }
+}

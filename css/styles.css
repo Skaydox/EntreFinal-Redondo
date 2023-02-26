@@ -1,35 +1,6 @@
 @charset "UTF-8";
 /*Colores*/
-/*Los cuadros de las caracterizticas principales del página*/
-/*Para la sección de imágenes*/
-.flex_derecha {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
-  align-items: center; }
-
-.flex_izquierda {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: right;
-  align-items: center; }
-
-.padding_banner-text {
-  padding: 128px;
-  font-size: 2rem;
-  font-weight: bold; }
-
-.imagenBanner {
-  transition: .3s all ease; }
-  .imagenBanner:hover {
-    transform: scale(1.02, 1.02); }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-/*Configuraciones básicas del Headder*/
+/*Configuraciones básicas del Header*/
 #logo {
   display: flex;
   flex-flow: row wrap;
@@ -54,11 +25,11 @@
 header {
   position: fixed;
   z-index: 10;
+  padding: 16px;
   top: 0;
   left: 0;
   right: 0;
   background: linear-gradient(to top, #7198c2, #8EA8C3);
-  padding: 16px;
   margin: 0;
   width: 100%;
   height: auto;
@@ -68,7 +39,11 @@ header {
   justify-content: space-between;
   align-items: center; }
   header nav ul {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     padding-top: 12px;
+    padding-bottom: 0px;
+    padding-left: 0rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -90,6 +65,61 @@ header {
 
 #header-fix {
   padding-top: 110px; }
+
+.p404_bg {
+  background-image: url("../assets/img/404.png");
+  background-size: cover; }
+
+.p404 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+  margin: 250px 0 250px 0; }
+  .p404 .p404_Title {
+    font-size: 10rem;
+    color: #464646;
+    font-weight: bold; }
+  .p404 .p404_Title2 {
+    color: #bcbcbc; }
+  .p404 .p404_Text {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 50px 0 50px 0; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*Los cuadros de las caracterizticas principales del página*/
+/*Para la sección de imágenes*/
+.flex_derecha {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+
+.flex_izquierda {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+
+.imagenBanner {
+  max-width: 100%;
+  height: auto;
+  transition: .3s all ease; }
+  .imagenBanner:hover {
+    transform: scale(1.02, 1.02); }
+
+.padding_banner-text {
+  padding: 34px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline; }
 
 .texto-destacado {
   background-color: black;
@@ -117,8 +147,8 @@ header {
   max-width: 700px;
   text-align: center;
   height: 150px;
-  background-color: rgba(135, 135, 135, 0.5);
-  box-shadow: 0px 0px 15px 5px rgba(135, 135, 135, 0.5);
+  background-color: rgba(111, 111, 111, 0.4);
+  box-shadow: 0px 0px 15px 10px rgba(135, 135, 135, 0.5);
   transition: all 0.3s ease;
   display: flex;
   flex-flow: column nowrap;
@@ -142,8 +172,8 @@ header {
   font-style: italic; }
 
 .descuentoBanner {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   transition: all 0.5s ease;
   border-radius: 20%; }
 
@@ -227,7 +257,7 @@ header {
   font-size: 5rem;
   font-weight: 800;
   color: #56c46e;
-  background-color: rgba(0, 0, 0, 0.371);
+  background-color: rgba(0, 0, 0, 0.271);
   animation-name: descuento;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -321,6 +351,9 @@ header {
 .contacto-fix {
   margin-left: 46px; }
 
+.contacto-text {
+  text-align: center; }
+
 footer {
   width: 100%;
   height: auto;
@@ -329,6 +362,9 @@ footer {
   color: white;
   text-align: center;
   align-self: center; }
+
+.footer-link {
+  color: white; }
 
 /*Media-querris para la adaptación en diferentes pantallas*/
 @media only screen and (max-width: 1164px) {
@@ -353,8 +389,10 @@ footer {
     height: 80%;
     align-content: center; }
   .descuentoBanner {
-    width: 250px;
-    height: 250px; } }
+    width: 200px;
+    height: 200px; }
+  .seccionCompra__h2--descuento {
+    font-size: 3rem; } }
 
 @media only screen and (max-width: 597px) {
   #header-fix {
